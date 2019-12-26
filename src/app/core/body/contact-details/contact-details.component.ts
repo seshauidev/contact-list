@@ -21,7 +21,7 @@ export class ContactDetailsComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.contactService.currentMessage.subscribe(message => {
+    this.contactService.currentData.subscribe(message => {
       let data: any = JSON.parse(message);
       this.name = `${data[0].firstName} ${data[0].lastName}` ;
       this.email = data[0].email;

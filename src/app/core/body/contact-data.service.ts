@@ -1,5 +1,5 @@
 import { InMemoryDbService } from 'angular-in-memory-web-api';
-import { Contact } from '../../../models/contact.interface';
+import { Contact } from '../../../models/contact-data.interface';
 
 export class ContactData implements InMemoryDbService {
   createDb(){

@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable, throwError } from 'rxjs';
 import { tap, catchError } from 'rxjs/operators';
-import { Contact } from '../../../models/contact.interface';
+import { Contact } from '../../../models/contact-data.interface';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
@@ -15,9 +15,8 @@ export class BodyService {
     httpOptions = {
         headers: this.headers
     };
-
-    private messageSource = new BehaviorSubject('default message');
-    currentMessage = this.messageSource.asObservable();
+    private dataSource = new BehaviorSubject('default data');
+    currentData = this.dataSource.asObservable();
 
     constructor(
         private http: HttpClient
@@ -43,7 +42,8 @@ export class BodyService {
       );
     }
 
-    changeMessage(message: string) {
-        this.messageSource.next(message)
+    changeData(data: string) {
+        this.dataSource.next(data)
     }
 }
+

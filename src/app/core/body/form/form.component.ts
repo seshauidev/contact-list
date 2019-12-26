@@ -3,7 +3,7 @@ import { FormGroup, Validators, FormControl } from '@angular/forms';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { BodyService } from '../body.service';
-import { Contact } from '../../../../models/contact.interface';
+import { Contact } from '../../../../models/contact-data.interface';
 import {
   MatSnackBar,
   MatSnackBarConfig,

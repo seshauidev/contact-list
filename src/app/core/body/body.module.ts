@@ -6,12 +6,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatInputModule } from '@angular/material/input';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { BodyComponent } from "./body.component";
 import { TableComponent } from "./table/table.component";
 import { FormComponent } from "./form/form.component";
 import { ContactDetailsComponent } from "./contact-details/contact-details.component";
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { BodyService } from './body.service';
 import { ContactData } from './contact-data.service';
 
