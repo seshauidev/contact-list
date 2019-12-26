@@ -1,0 +1,37 @@
+.table-container {
+  padding: 20px 200px 200px 200px;
+  display: block;
+
+  .header {
+    display: flex;
+    justify-content: left;
+    position: relative;
+  
+    .table-heading {
+      text-align: left;
+    }
+    .new-customer-button {
+      position: absolute;
+      right: 0;
+      margin: 20px 0 20px;
+      border: 2px #347eb7 solid;
+      color: #347eb7;
+    }
+  }
+
+  table {
+    width: 100%;
+  }
+  
+  tr.mat-header-row {
+    background: #347eb7;
+  }
+
+  th.mat-header-cell {
+    color: #fff;
+}
+  
+  .new-customer-button {
+    width: 200px;
+  }
+}

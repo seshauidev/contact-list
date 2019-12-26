@@ -1,0 +1,49 @@
+<div class="form-container">
+  <form class="form-main" fxLayout="column" fxLayoutGap="20px" #f="ngForm" (ngSubmit)="onSubmit(f)" [formGroup]="newContactForm">
+    <h2 class="form-header">Creater New Contact</h2>
+    <div class="input-row" fxLayout="row" fxLayoutGap="20px">
+      <mat-form-field class="form-field" fxFlex appearance="outline">
+        <mat-label>First Name</mat-label>
+        <input matInput #input type="text" formControlName="firstName" placeholder="First Name">
+        <mat-error *ngIf="newContactForm.get('firstName').hasError('required')">First name is required</mat-error>
+      </mat-form-field>
+      
+      <mat-form-field class="form-field" fxFlex appearance="outline">
+        <mat-label>Last Name</mat-label>
+        <input matInput #input type="text" formControlName="lastName" placeholder="Last Name">
+        <mat-error *ngIf="newContactForm.get('lastName').hasError('required')">Last name is required</mat-error>
+      </mat-form-field>
+    </div>
+  
+    <div class="input-row" fxLayout="row" fxLayout.sm="column" fxLayout.xs="column" fxLayoutGap="30px">
+      <mat-form-field class="form-field" fxFlex appearance="outline">
+        <mat-label>Company</mat-label>
+        <input matInput #input type="text" formControlName="company" placeholder="Company">
+        <mat-error *ngIf="newContactForm.get('company').hasError('required')">Company is required</mat-error>
+      </mat-form-field>
+  
+      <mat-form-field class="form-field" fxFlex appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput #input type="text" formControlName="email" placeholder="Email">
+        <mat-error *ngIf="newContactForm.get('email').hasError('required')">Email is required</mat-error>
+        <mat-error *ngIf="newContactForm.get('email').hasError('pattern')">Invalid email format</mat-error>
+      </mat-form-field>
+    </div>
+  
+    <div class="input-row" fxLayout="row" fxLayout.sm="column" fxLayout.xs="column" fxLayoutGap="30px">
+      <mat-form-field class="form-field" fxFlex appearance="outline">
+        <mat-label>Phone</mat-label>
+        <input matInput #input type="text" formControlName="phone" placeholder="Phone">
+        <mat-error *ngIf="newContactForm.get('phone').hasError('required')">Phone number is required</mat-error>
+      </mat-form-field>
+  
+      <mat-form-field class="form-field" fxFlex appearance="outline">
+        <mat-label>Address</mat-label>
+        <input matInput #input type="text" formControlName="address" placeholder="Address">
+        <mat-error *ngIf="newContactForm.get('address').hasError('required')">Address is required</mat-error>
+      </mat-form-field>
+    </div>
+   
+    <button type="submit" mat-stroked-button color="primary" [disabled]="!newContactForm.valid" class="save-button">Save</button>
+  </form>
+</div>

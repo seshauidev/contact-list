@@ -1,0 +1,18 @@
+<div class="contact-container">
+    <div class="contact">
+        <div><a mat-button (click)="btnClick();" class="contact-list-button">< Contact List</a></div>
+
+        <h2 class="contact-name">{{name}}</h2>
+
+        <div class="contact-stamp">
+            <div>
+                <p><a href="#" class="email">{{email}}</a></p>
+            </div>
+            <div>{{company | titlecase}}</div>
+            <div>
+                <p>{{address}}</p>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+.contact-container {
+    .contact {
+        width: 70%;
+        margin: auto;
+        padding-top:20px;
+
+        .contact-list-button {
+            color: #4e8fc1;
+        }
+
+        .contact-name {
+            margin: 15px 0;
+        }
+
+        .contact-stamp {
+            background-color: #f7f7f8;
+            padding: 30px;
+            color: #323232;
+
+            .email {
+                    color: #4e8fc1;
+                    text-decoration: none;
+            }
+        }
+    }
+}
